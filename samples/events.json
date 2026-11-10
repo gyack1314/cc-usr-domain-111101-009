@@ -1,0 +1,12 @@
+[
+  {
+    "event_id": "e-1",
+    "vehicle_ref": "v-001",
+    "kind": "maintenance"
+  },
+  {
+    "event_id": "e-2",
+    "vehicle_ref": "v-002",
+    "kind": "inspection"
+  }
+]

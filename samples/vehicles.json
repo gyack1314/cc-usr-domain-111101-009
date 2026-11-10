@@ -1,0 +1,14 @@
+[
+  {
+    "vehicle_id": "v-001",
+    "operator_id": "op-a",
+    "workshop": "W1",
+    "internal_note": "合成内部备注"
+  },
+  {
+    "vehicle_id": "v-002",
+    "operator_id": "op-a",
+    "workshop": "W2",
+    "internal_note": "合成内部备注"
+  }
+]

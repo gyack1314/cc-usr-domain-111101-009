@@ -1,0 +1,20 @@
+[
+  {
+    "partner": "P1",
+    "project": "traffic-data",
+    "week": "2026-W45",
+    "key_version": "v1"
+  },
+  {
+    "partner": "P2",
+    "project": "traffic-data",
+    "week": "2026-W45",
+    "key_version": "v1"
+  },
+  {
+    "partner": "P1",
+    "project": "traffic-data",
+    "week": "2026-W45",
+    "key_version": "v2"
+  }
+]

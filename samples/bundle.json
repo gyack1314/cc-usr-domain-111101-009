@@ -1,0 +1,21 @@
+{
+  "name": "多方日志共享的作用域假名与键轮换",
+  "files": [
+    {
+      "path": "vehicles.json",
+      "key": "vehicle_id"
+    },
+    {
+      "path": "operators.json",
+      "key": "operator_id"
+    },
+    {
+      "path": "events.json",
+      "key": "event_id"
+    },
+    {
+      "path": "policies.json",
+      "key": "table"
+    }
+  ]
+}

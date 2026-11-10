@@ -1,0 +1,61 @@
+[
+  {
+    "table": "vehicles",
+    "primary": "vehicle_id",
+    "fields": {
+      "vehicle_id": {
+        "action": "id",
+        "entity": "vehicle",
+        "normalize": "upper_ascii"
+      },
+      "operator_id": {
+        "action": "ref",
+        "entity": "operator",
+        "normalize": "exact",
+        "ref_table": "operators",
+        "ref_field": "operator_id"
+      },
+      "workshop": {
+        "action": "keep"
+      },
+      "internal_note": {
+        "action": "drop"
+      }
+    }
+  },
+  {
+    "table": "operators",
+    "primary": "operator_id",
+    "fields": {
+      "operator_id": {
+        "action": "id",
+        "entity": "operator",
+        "normalize": "exact"
+      },
+      "display": {
+        "action": "drop"
+      }
+    }
+  },
+  {
+    "table": "events",
+    "primary": "event_id",
+    "fields": {
+      "event_id": {
+        "action": "id",
+        "entity": "event",
+        "normalize": "exact"
+      },
+      "vehicle_ref": {
+        "action": "ref",
+        "entity": "vehicle",
+        "normalize": "upper_ascii",
+        "ref_table": "vehicles",
+        "ref_field": "vehicle_id"
+      },
+      "kind": {
+        "action": "keep"
+      }
+    }
+  }
+]
