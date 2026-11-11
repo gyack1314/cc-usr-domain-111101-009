@@ -15,7 +15,7 @@
     },
     {
       "path": "policies.json",
-      "key": "table"
+      "config": true
     }
   ]
 }

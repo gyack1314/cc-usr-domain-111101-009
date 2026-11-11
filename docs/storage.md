@@ -1,6 +1,6 @@
 # 数据包与版本目录
 
-samples/bundle.json声明记录文件和主键。inspect仅检查可读性、记录数与内容摘要，不执行领域加工。JSON使用UTF-8，JSON对象键不能重复；CSV头不可重名且各行列数一致。相同主键重复记录与相同主键不同内容分别报告，不自动覆盖。
+samples/bundle.json声明记录文件和主键，`config: true`的文件（如policies.json）是策略配置，不参与业务表检查与导出。inspect仅检查可读性、记录数与内容摘要，不执行领域加工。JSON使用UTF-8，JSON对象键不能重复；CSV头不可重名且各行列数一致。相同主键重复记录与相同主键不同内容分别报告，不自动覆盖。
 
 datapack.storage提供稳定JSON编码、SHA-256、单文件原子写入、目录内路径约束和SQLite修订目录。RevisionStore.put(stream,expected,value)在事务内比较预期版本，内容完全相同则幂等返回已有版本，版本冲突抛Conflict。get可读取旧版本，latest返回现版；目录只保存调用者提交的值，不自动认定业务处理成功。输入文件与内容目录不要混放。
 

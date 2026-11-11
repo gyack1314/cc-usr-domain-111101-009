@@ -40,6 +40,7 @@ def index_rows(rows,key):
 def inspect_bundle(root):
     root=Path(root);config=read_json(root/'bundle.json');files=[]
     for item in config['files']:
+        if item.get('config'):continue
         path=confined(root,item['path']);rows=load_rows(path)
         if item.get('key'):index_rows(rows,item['key'])
         files.append({'path':item['path'],'rows':len(rows),'sha256':fingerprint(rows)})
